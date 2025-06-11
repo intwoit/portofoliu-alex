@@ -1,3 +1,4 @@
+// App.js – reparat extragerea datelor din API
 import React, { useEffect, useState } from 'react';
 import investments from './data';
 import './index.css';
@@ -5,30 +6,37 @@ import './index.css';
 function App() {
   const [prices, setPrices] = useState({});
   const [loading, setLoading] = useState(true);
-
-  // 👇 autentificare simplă cu parolă
   const [authenticated, setAuthenticated] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
 
   useEffect(() => {
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,chainlink,fetch-ai&vs_currencies=usd')
-      .then(res => res.json())
-      .then(data => {
+    fetch(
+      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin&vs_currencies=usd'
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("API Data:", data); // pentru debugging
         const formatted = {
-          ETH: data.ethereum?.usd ?? 0,
-          LINK: data.chainlink?.usd ?? 0,
+          BTC: data["bitcoin"]?.usd ?? 0,
+          ETH: data["ethereum"]?.usd ?? 0,
+          ADA: data["cardano"]?.usd ?? 0,
+          LINK: data["chainlink"]?.usd ?? 0,
+          DOT: data["polkadot"]?.usd ?? 0,
+          SOL: data["solana"]?.usd ?? 0,
+          DYM: data["dymension"]?.usd ?? 0,
           FET: data["fetch-ai"]?.usd ?? 0,
+          SEI: data["sei-network"]?.usd ?? 0,
+          WIF: data["dogwifcoin"]?.usd ?? 0,
         };
         setPrices(formatted);
         setLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error('Failed to fetch prices:', err);
         setLoading(false);
       });
   }, []);
 
-  // 👇 blocare aplicație până la introducerea parolei corecte
   if (!authenticated) {
     return (
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center font-mono">
@@ -42,7 +50,7 @@ function App() {
         />
         <button
           onClick={() => {
-            if (passwordInput === 'andrei2025') {
+            if (passwordInput === 'alex2025') {
               setAuthenticated(true);
             } else {
               alert('Wrong password');
@@ -56,7 +64,7 @@ function App() {
     );
   }
 
-  const processedData = investments.map(inv => {
+  const processedData = investments.map((inv) => {
     const totalInvestment = inv.entries.reduce((sum, e) => sum + e.amount * e.price, 0);
     const totalAmount = inv.entries.reduce((sum, e) => sum + e.amount, 0);
     const avgPrice = totalAmount > 0 ? totalInvestment / totalAmount : 0;
@@ -78,15 +86,13 @@ function App() {
   const totalValue = processedData.reduce((sum, item) => sum + item.value, 0);
   const totalInvestment = processedData.reduce((sum, item) => sum + item.investment, 0);
   const totalProfit = totalValue - totalInvestment;
-  const andreisShare = totalInvestment + 0.7 * totalProfit;
-  const alexsShare = totalProfit > 0 ? 0.3 * totalProfit : 0;
 
   const format = (val, decimals = 2) => Number(val).toFixed(decimals);
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-black via-gray-900 to-gray-800 text-white p-6 font-mono">
       <h1 className="text-3xl text-cyan-400 font-bold mb-8 border-b border-cyan-700 pb-2">
-        Andrei Crypto Tracker
+        Alex Crypto Tracker
       </h1>
 
       <div className="overflow-x-auto">
@@ -111,8 +117,8 @@ function App() {
                 <td className="px-4 py-2">{format(coin.amount, 5)}</td>
                 <td className="px-4 py-2">{loading ? 'Loading...' : `$${format(coin.livePrice, 4)}`}</td>
                 <td className="px-4 py-2">${format(coin.value)}</td>
-                <td className={`px-4 py-2 font-bold ${coin.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                  {coin.pnl >= 0 ? '+' : ''}{format(coin.pnl, 2)}%
+                <td className={`px-4 py-2 ${coin.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {format(coin.pnl)}%
                 </td>
               </tr>
             ))}
@@ -120,17 +126,15 @@ function App() {
         </table>
       </div>
 
-      {!loading && (
-        <div className="mt-8 space-y-2 text-cyan-200">
-          <p><strong>Total Portfolio Value:</strong> ${format(totalValue)}</p>
-          <p><strong>Andrei's Share (70% profit + total):</strong> ${format(andreisShare)}</p>
-          <p><strong>Alex's Share (30% profit):</strong> ${format(alexsShare)}</p>
-          <p><strong>Target date for closing:</strong> December 31, 2025</p>
-          <p><strong>Cash reserved for dips:</strong> $490</p>
-        </div>
-      )}
+      <div className="mt-6 text-cyan-300">
+        <p>Total Investment: ${format(totalInvestment)}</p>
+        <p>Total Value: ${format(totalValue)}</p>
+        <p>Total P/L: ${format(totalProfit)}</p>
+        <p>Cash reserved for dips: $590</p>
+      </div>
     </div>
   );
 }
 
 export default App;
+
