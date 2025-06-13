@@ -130,7 +130,7 @@ function App() {
         <p>Total Investment: ${format(totalInvestment)}</p>
         <p>Total Value: ${format(totalValue)}</p>
         <p>Total P/L: ${format(totalProfit)}</p>
-        <p>Cash reserved for dips: $590</p>
+        <p>Cash reserved for dips: $90</p>
       </div>
     </div>
   );
