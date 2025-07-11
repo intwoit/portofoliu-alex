@@ -129,7 +129,10 @@ function App() {
       <div className="mt-6 text-cyan-300">
         <p>Total Investment: ${format(totalInvestment)}</p>
         <p>Total Value: ${format(totalValue)}</p>
-        <p>Total P/L: ${format(totalProfit)}</p>
+<p style={{ color: totalProfit >= 0 ? "limegreen" : "crimson" }}>
+  Total P/L: ${format(totalProfit)} ({((totalProfit / totalInvestment) * 100).toFixed(2)}%)
+</p>
+
         <p>Cash reserved for dips: $10000</p>
       </div>
     </div>
