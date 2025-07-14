@@ -11,8 +11,9 @@ function App() {
 
   useEffect(() => {
     fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin&vs_currencies=usd'
-    )
+  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin,render-token,liquity-dao,gmx,strike-xyz,radiant-capital,rez,ether.fi&vs_currencies=usd'
+)
+
       .then((res) => res.json())
       .then((data) => {
         console.log("API Data:", data); // pentru debugging
@@ -27,6 +28,14 @@ function App() {
           FET: data["fetch-ai"]?.usd ?? 0,
           SEI: data["sei-network"]?.usd ?? 0,
           WIF: data["dogwifcoin"]?.usd ?? 0,
+	  RNDR: data["render-token"]?.usd ?? 0,
+	  LDO: data["liquity-dao"]?.usd ?? 0,
+	  GMX: data["gmx"]?.usd ?? 0,
+	  STRK: data["strike-xyz"]?.usd ?? 0,
+	  RDNT: data["radiant-capital"]?.usd ?? 0,
+	  REZ: data["rez"]?.usd ?? 0,
+	  ETHFI: data["ether.fi"]?.usd ?? 0,
+
         };
         setPrices(formatted);
         setLoading(false);
