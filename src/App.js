@@ -11,8 +11,9 @@ function App() {
 
   useEffect(() => {
   fetch(
-  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin,render-token,lido-dao,gmx,strike,radiant-capital,renzo-restaking,ether-fi&vs_currencies=usd'
+  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin,render-token,lido-dao,gmx,starknet,radiant-capital,renzo,ether-fi&vs_currencies=usd'
 )
+
 
 
 
@@ -33,9 +34,9 @@ function App() {
   RNDR: data["render-token"]?.usd ?? 0,
   LDO: data["lido-dao"]?.usd ?? 0,
   GMX: data["gmx"]?.usd ?? 0,
-  STRK: data["strike"]?.usd ?? 0,
+  STRK: data["starknet"]?.usd ?? 0,
   RDNT: data["radiant-capital"]?.usd ?? 0,
-  REZ: data["renzo-restaking"]?.usd ?? 0,
+  REZ: data["renzo"]?.usd ?? 0,
   ETHFI: data["ether-fi"]?.usd ?? 0,
 };
 
