@@ -10,33 +10,33 @@ function App() {
   const [passwordInput, setPasswordInput] = useState('');
 
   useEffect(() => {
-    fetch(
-  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin,render-token,liquity-dao,gmx,strike-xyz,radiant-capital,rez,ether.fi&vs_currencies=usd'
+   fetch(
+  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin,render-token,lido-dao,gmx,strike,radiant-capital,ether-fi&vs_currencies=usd'
 )
+
 
       .then((res) => res.json())
       .then((data) => {
         console.log("API Data:", data); // pentru debugging
         const formatted = {
-          BTC: data["bitcoin"]?.usd ?? 0,
-          ETH: data["ethereum"]?.usd ?? 0,
-          ADA: data["cardano"]?.usd ?? 0,
-          LINK: data["chainlink"]?.usd ?? 0,
-          DOT: data["polkadot"]?.usd ?? 0,
-          SOL: data["solana"]?.usd ?? 0,
-          DYM: data["dymension"]?.usd ?? 0,
-          FET: data["fetch-ai"]?.usd ?? 0,
-          SEI: data["sei-network"]?.usd ?? 0,
-          WIF: data["dogwifcoin"]?.usd ?? 0,
-	  RNDR: data["render-token"]?.usd ?? 0,
-	  LDO: data["liquity-dao"]?.usd ?? 0,
-	  GMX: data["gmx"]?.usd ?? 0,
-	  STRK: data["strike-xyz"]?.usd ?? 0,
-	  RDNT: data["radiant-capital"]?.usd ?? 0,
-	  REZ: data["rez"]?.usd ?? 0,
-	  ETHFI: data["ether.fi"]?.usd ?? 0,
+  BTC: data["bitcoin"]?.usd ?? 0,
+  ETH: data["ethereum"]?.usd ?? 0,
+  ADA: data["cardano"]?.usd ?? 0,
+  LINK: data["chainlink"]?.usd ?? 0,
+  DOT: data["polkadot"]?.usd ?? 0,
+  SOL: data["solana"]?.usd ?? 0,
+  DYM: data["dymension"]?.usd ?? 0,
+  FET: data["fetch-ai"]?.usd ?? 0,
+  SEI: data["sei-network"]?.usd ?? 0,
+  WIF: data["dogwifcoin"]?.usd ?? 0,
+  RNDR: data["render-token"]?.usd ?? 0,
+  LDO: data["lido-dao"]?.usd ?? 0,
+  GMX: data["gmx"]?.usd ?? 0,
+  STRK: data["strike"]?.usd ?? 0,
+  RDNT: data["radiant-capital"]?.usd ?? 0,
+  ETHFI: data["ether-fi"]?.usd ?? 0,
+};
 
-        };
         setPrices(formatted);
         setLoading(false);
       })
