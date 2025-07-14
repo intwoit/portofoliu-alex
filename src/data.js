@@ -7,6 +7,13 @@ const investments = [
   { asset: "SOL", entries: [{ amount: 4577 / 194.20, price: 194.20 }] },
   { asset: "SEI", entries: [{ amount: 5390 / 0.4767, price: 0.4767 }] },
   { asset: "FET", entries: [{ amount: 200 / 0.7277, price: 0.7277 }] },
+  { asset: "RNDR", entries: [{ amount: 300 / 3.82, price: 3.82 }] },
+  { asset: "LDO", entries: [{ amount: 200 / 0.8480, price: 0.8480 }] },
+  { asset: "GMX", entries: [{ amount: 200 / 12.87, price: 12.87 }] },
+  { asset: "STRK", entries: [{ amount: 200 / 0.1402, price: 0.1402 }] },
+  { asset: "RDNT", entries: [{ amount: 200 / 0.02478, price: 0.02478 }] },
+  { asset: "REZ", entries: [{ amount: 200 / 0.01155, price: 0.01155 }] },
+  { asset: "ETHFI", entries: [{ amount: 200 / 1.21, price: 1.21 }] },
 ];
 
 export default investments;
