@@ -5,10 +5,8 @@ const investments = [
   { asset: "LINK", entries: [{ amount: 16380 / 17.57, price: 17.57 }] },
   { asset: "DOT", entries: [{ amount: 11307 / 7.40, price: 7.40 }] },
   { asset: "SOL", entries: [{ amount: 4577 / 194.20, price: 194.20 }] },
-  
-  
   { asset: "SEI", entries: [{ amount: 5390 / 0.4767, price: 0.4767 }] },
-  
+  { asset: "FET", entries: [{ amount: 200 / 0.7277, price: 0.7277 }] },
 ];
 
 export default investments;
