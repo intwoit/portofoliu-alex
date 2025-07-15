@@ -12,7 +12,7 @@ const investments = [
   { asset: "GMX", entries: [{ amount: 200 / 12.87, price: 12.87 }] },
   { asset: "STRK", entries: [{ amount: 200 / 0.1402, price: 0.1402 }] },
   { asset: "RDNT", entries: [{ amount: 200 / 0.02478, price: 0.02478 }] },
-  { asset: "REZ", entries: [{ amount: 200 / 0.01155, price: 0.01155 }] },
+  { asset: "REZ", entries: [{ amount: 300 / 0.01245, price: 0.01245 }] },
   { asset: "ETHFI", entries: [{ amount: 200 / 1.21, price: 1.21 }] },
 ];
 
