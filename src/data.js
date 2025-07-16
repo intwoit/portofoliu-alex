@@ -6,14 +6,14 @@ const investments = [
   { asset: "DOT", entries: [{ amount: 11307 / 7.40, price: 7.40 }] },
   { asset: "SOL", entries: [{ amount: 4577 / 194.20, price: 194.20 }] },
   { asset: "SEI", entries: [{ amount: 5390 / 0.4767, price: 0.4767 }] },
-  { asset: "FET", entries: [{ amount: 200 / 0.7277, price: 0.7277 }] },
+  { asset: "FET", entries: [{ amount: 400 / 0.7368, price: 0.7368 }] },
   { asset: "RNDR", entries: [{ amount: 300 / 3.82, price: 3.82 }] },
-  { asset: "LDO", entries: [{ amount: 200 / 0.8480, price: 0.8480 }] },
-  { asset: "GMX", entries: [{ amount: 200 / 12.87, price: 12.87 }] },
-  { asset: "STRK", entries: [{ amount: 200 / 0.1402, price: 0.1402 }] },
+  { asset: "LDO", entries: [{ amount: 400 / 0.8693, price: 0.8693 }] },
+  { asset: "GMX", entries: [{ amount: 400 / 12.93, price: 12.93 }] },
+  { asset: "STRK", entries: [{ amount: 300 / 0.1417, price: 0.1417 }] },
   { asset: "RDNT", entries: [{ amount: 200 / 0.02478, price: 0.02478 }] },
-  { asset: "REZ", entries: [{ amount: 280 / 0.01245, price: 0.01245 }] },
-  { asset: "ETHFI", entries: [{ amount: 200 / 1.21, price: 1.21 }] },
+  { asset: "REZ", entries: [{ amount: 380 / 0.01302, price: 0.01302 }] },
+  { asset: "ETHFI", entries: [{ amount: 300 / 1.2167, price: 1.2167 }] },
 ];
 
 export default investments;
