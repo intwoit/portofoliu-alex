@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
   fetch(
-  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,chainlink,polkadot,solana,dymension,fetch-ai,sei-network,dogwifcoin,render-token,lido-dao,gmx,starknet,radiant-capital,renzo,ether-fi,pendle&vs_currencies=usd'
+  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,chainlink,solana,fetch-ai,sei-network,render-token,lido-dao,gmx,starknet,radiant-capital,renzo,ether-fi,pendle&vs_currencies=usd'
 )
 
 
@@ -23,9 +23,7 @@ function App() {
         const formatted = {
   BTC: data["bitcoin"]?.usd ?? 0,
   ETH: data["ethereum"]?.usd ?? 0,
-  ADA: data["cardano"]?.usd ?? 0,
   LINK: data["chainlink"]?.usd ?? 0,
-  DOT: data["polkadot"]?.usd ?? 0,
   SOL: data["solana"]?.usd ?? 0,
   DYM: data["dymension"]?.usd ?? 0,
   FET: data["fetch-ai"]?.usd ?? 0,
@@ -146,7 +144,7 @@ function App() {
   Total P/L: ${format(totalProfit)} ({((totalProfit / totalInvestment) * 100).toFixed(2)}%)
 </p>
 
-        <p>Cash reserved for dips: $10879</p>
+        <p>Cash reserved for dips: $10980</p>
       </div>
     </div>
   );

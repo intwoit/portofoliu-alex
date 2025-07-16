@@ -1,9 +1,7 @@
 const investments = [
   { asset: "BTC", entries: [{ amount: 17905 / 96057, price: 96057 }] },
   { asset: "ETH", entries: [{ amount: 20885 / 2867, price: 2867 }] },
-  { asset: "ADA", entries: [{ amount: 199 / 1.52, price: 1.52 }] },
   { asset: "LINK", entries: [{ amount: 16380 / 17.57, price: 17.57 }] },
-  { asset: "DOT", entries: [{ amount: 10057 / 8.23, price: 8.23 }] },
   { asset: "SOL", entries: [{ amount: 5827 / 186.56, price: 186.56 }] },
   { asset: "SEI", entries: [{ amount: 5390 / 0.4767, price: 0.4767 }] },
   { asset: "FET", entries: [{ amount: 600 / 0.7469, price: 0.7469 }] },
@@ -14,7 +12,7 @@ const investments = [
   { asset: "RDNT", entries: [{ amount: 200 / 0.02478, price: 0.02478 }] },
   { asset: "REZ", entries: [{ amount: 580 / 0.01388, price: 0.01388 }] },
   { asset: "ETHFI", entries: [{ amount: 500 / 1.23, price: 1.23 }] },
-  { asset: "PENDLE", entries: [{ amount: 500 / 4.13, price: 4.13 }] },
+  { asset: "PENDLE", entries: [{ amount: 5624 / 4.30, price: 4.30 }] },
 ];
 
 export default investments;
