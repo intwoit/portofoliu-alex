@@ -14,6 +14,7 @@ const investments = [
   { asset: "RDNT", entries: [{ amount: 200 / 0.02478, price: 0.02478 }] },
   { asset: "REZ", entries: [{ amount: 580 / 0.01388, price: 0.01388 }] },
   { asset: "ETHFI", entries: [{ amount: 500 / 1.23, price: 1.23 }] },
+  { asset: "PENDLE", entries: [{ amount: 500 / 4.13, price: 4.13 }] },
 ];
 
 export default investments;
