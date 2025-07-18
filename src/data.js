@@ -11,7 +11,7 @@ const investments = [
   { asset: "STRK", entries: [{ amount: 800 / 0.14440, price: 0.14440 }] },
   { asset: "RDNT", entries: [{ amount: 200 / 0.02478, price: 0.02478 }] },
   { asset: "REZ", entries: [{ amount: 1280 / 0.01391, price: 0.01391 }] },
-  { asset: "ETHFI", entries: [{ amount: 300 / 1.27, price: 1.27 }] },
+  { asset: "ETHFI", entries: [{ amount: 800 / 1.27, price: 1.27 }] },
   { asset: "PENDLE", entries: [{ amount: 3595 / 4.26, price: 4.26 }] },
 ];
 
