@@ -25,10 +25,8 @@ function App() {
   ETH: data["ethereum"]?.usd ?? 0,
   LINK: data["chainlink"]?.usd ?? 0,
   SOL: data["solana"]?.usd ?? 0,
-  DYM: data["dymension"]?.usd ?? 0,
   FET: data["fetch-ai"]?.usd ?? 0,
   SEI: data["sei-network"]?.usd ?? 0,
-  WIF: data["dogwifcoin"]?.usd ?? 0,
   RNDR: data["render-token"]?.usd ?? 0,
   LDO: data["lido-dao"]?.usd ?? 0,
   GMX: data["gmx"]?.usd ?? 0,
@@ -144,7 +142,7 @@ function App() {
   Total P/L: ${format(totalProfit)} ({((totalProfit / totalInvestment) * 100).toFixed(2)}%)
 </p>
 
-        <p>Cash reserved for dips: $10980</p>
+        <p>Cash reserved for dips: $11060</p>
       </div>
     </div>
   );
