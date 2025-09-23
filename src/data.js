@@ -6,7 +6,7 @@ const investments = [
   { asset: "SEI", entries: [{ amount: 1435 / 0.393, price: 0.393 }] },
   { asset: "FET", entries: [{ amount: 1857 / 0.825, price: 0.825 }] },
   { asset: "PENDLE", entries: [{ amount: 4395 / 4.40, price: 4.40  }] },
-  { asset: "ADA", entries: [{ amount: 8000 / 0.95, price: 0.95 }] },
+  { asset: "ADA", entries: [{ amount: 7500 / 0.86, price: 0.86 }] },
 ];
 
 export default investments;
