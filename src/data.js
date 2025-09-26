@@ -1,6 +1,6 @@
 const investments = [
-  { asset: "BTC", entries: [{ amount: 27905 / 101460.70, price: 101460.70 }] },
-  { asset: "ETH", entries: [{ amount: 13822 / 2260, price: 2260 }] },
+  { asset: "BTC", entries: [{ amount: 30005 / 102150.47, price: 102150.47 }] },
+  { asset: "ETH", entries: [{ amount: 15822 / 2385.49, price: 2385.49 }] },
   { asset: "LINK", entries: [{ amount: 18952 / 20.43, price: 20.43 }] },
   { asset: "SOL", entries: [{ amount: 5562 / 200.77, price: 200.77 }] },
   { asset: "SEI", entries: [{ amount: 1435 / 0.393, price: 0.393 }] },
