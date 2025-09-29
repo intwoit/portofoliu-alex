@@ -1,7 +1,7 @@
 const investments = [
-  { asset: "BTC", entries: [{ amount: 31005 / 102375.04, price: 102375.04 }] },
-  { asset: "ETH", entries: [{ amount: 16822 / 2444.42, price: 2444.42 }] },
-  { asset: "LINK", entries: [{ amount: 16452 / 20.43, price: 20.43 }] },
+  { asset: "BTC", entries: [{ amount: 32005 / 102656, price: 102656 }] },
+  { asset: "ETH", entries: [{ amount: 20322 / 2629.48 price: 2629.48 }] },
+  { asset: "LINK", entries: [{ amount: 16952 / 20.46, price: 20.46 }] },
   { asset: "SOL", entries: [{ amount: 5562 / 200.77, price: 200.77 }] },
   { asset: "SEI", entries: [{ amount: 1435 / 0.393, price: 0.393 }] },
   { asset: "FET", entries: [{ amount: 1857 / 0.825, price: 0.825 }] },
