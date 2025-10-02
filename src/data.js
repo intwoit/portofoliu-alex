@@ -1,5 +1,5 @@
 const investments = [
-  { asset: "BTC", entries: [{ amount: 32005 / 102656, price: 102656 }] },
+  { asset: "BTC", entries: [{ amount: 32805 / 110002, price: 110002 }] },
   { asset: "ETH", entries: [{ amount: 16071 / 2629.48, price: 2629.48 }] },
   { asset: "LINK", entries: [{ amount: 15586 / 20.46, price: 20.46 }] },
   { asset: "SOL", entries: [{ amount: 4208 / 200.77, price: 200.77 }] },
