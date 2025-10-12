@@ -1,9 +1,9 @@
 const investments = [
-  { asset: "BTC", entries: [{ amount: 16942.32 / 110003, price: 110003 }] },
-  { asset: "ETH", entries: [{ amount: 32403 / 3281, price: 3281 }] },
-  { asset: "LINK", entries: [{ amount: 23199 / 21.65, price: 21.65 }] },
-  { asset: "SOL", entries: [{ amount: 11288 / 221.63, price: 221.63 }] },
-  { asset: "PENDLE", entries: [{ amount: 6000 / 4.69, price: 4.69  }] },
+  { asset: "BTC", entries: [{ amount: 53000 / 112530, price: 112530 }] },
+  { asset: "ETH", entries: [{ amount: 34300 / 3831, price: 3831 }] },
+  { asset: "LINK", entries: [{ amount: 7700 / 17.81, price: 17.81 }] },
+  { asset: "SOL", entries: [{ amount: 4400 / 182.27, price: 182.27 }] },
+  { asset: "PENDLE", entries: [{ amount: 2700 / 3.57, price: 3.57  }] },
   ];
 
 export default investments;
