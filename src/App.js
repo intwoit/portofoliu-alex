@@ -143,7 +143,7 @@ function App() {
   Total P/L: ${format(totalProfit)} ({((totalProfit / totalInvestment) * 100).toFixed(2)}%)
 </p>
 
-        <p>Cash reserved for dips: $0</p>
+        <p>Cash reserved for dips: $15550</p>
       </div>
     </div>
   );
