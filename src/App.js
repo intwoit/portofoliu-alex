@@ -1,6 +1,6 @@
 // App.js – reparat extragerea datelor din API
 import React, { useEffect, useState } from 'react';
-import investments from './data';
+import investments from "./data";
 import './index.css';
 
 function App() {
