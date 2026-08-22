@@ -6,4 +6,7 @@ const investments = [
   { asset: "PENDLE", entries: [{ amount: 166.25, price: 1.60 }] },
 ];
 
+// Profit deja realizat prin vanzari
+export const realizedProfit = 82;
+
 export default investments;

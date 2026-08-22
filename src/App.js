@@ -1,6 +1,6 @@
 // App.js – reparat extragerea datelor din API
 import React, { useEffect, useState } from 'react';
-import investments from "./data";
+import investments, { realizedProfit } from "./data";
 import './index.css';
 
 function App() {
@@ -93,9 +93,11 @@ function App() {
     };
   });
 
-  const totalValue = processedData.reduce((sum, item) => sum + item.value, 0);
-  const totalInvestment = processedData.reduce((sum, item) => sum + item.investment, 0);
-  const totalProfit = totalValue - totalInvestment;
+const totalValue = processedData.reduce((sum, item) => sum + item.value, 0);
+const totalInvestment = processedData.reduce((sum, item) => sum + item.investment, 0);
+
+const unrealizedProfit = totalValue - totalInvestment;
+const totalProfit = unrealizedProfit + realizedProfit;
 
   const format = (val, decimals = 2) => Number(val).toFixed(decimals);
 
@@ -137,13 +139,22 @@ function App() {
       </div>
 
       <div className="mt-6 text-cyan-300">
-        <p>Total Investment: ${format(totalInvestment)}</p>
-        <p>Total Value: ${format(totalValue)}</p>
-<p style={{ color: totalProfit >= 0 ? "limegreen" : "crimson" }}>
-  Total P/L: ${format(totalProfit)} ({((totalProfit / totalInvestment) * 100).toFixed(2)}%)
+<p>Total Cost Basis: ${format(totalInvestment)}</p>
+<p>Portfolio Value: ${format(totalValue)}</p>
+
+<p style={{ color: unrealizedProfit >= 0 ? "limegreen" : "crimson" }}>
+  Unrealized P/L: ${format(unrealizedProfit)}
 </p>
 
-        <p>Cash reserved for dips: $27190</p>
+<p style={{ color: realizedProfit >= 0 ? "limegreen" : "crimson" }}>
+  Realized P/L 2026: ${format(realizedProfit)}
+</p>
+
+<p style={{ color: totalProfit >= 0 ? "limegreen" : "crimson" }}>
+  Total P/L: ${format(totalProfit)}
+</p>
+
+<p>Cash reserved for dips: $27190</p>
       </div>
     </div>
   );
