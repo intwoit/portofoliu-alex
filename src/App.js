@@ -155,7 +155,7 @@ const totalProfit = unrealizedProfit + realizedProfit;
   Total P/L: ${format(totalProfit)}
 </p>
 
-<p>Cash reserved for dips: $22993</p>
+<p>Cash reserved for dips: $15000</p>
       </div>
     </div>
   );
