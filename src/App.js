@@ -139,7 +139,7 @@ const totalProfit = unrealizedProfit + realizedProfit;
       </div>
 
       <div className="mt-6 text-cyan-300">
-<p>Investment: $23767</p>
+<p>Investment: $29515</p>
 <p>Total Cost Basis: ${format(totalInvestment)}</p>
 <p>Portfolio Value: ${format(totalValue)}</p>
 
@@ -155,7 +155,7 @@ const totalProfit = unrealizedProfit + realizedProfit;
   Total P/L: ${format(totalProfit)}
 </p>
 
-<p>Cash reserved for dips: $14950</p>
+<p>Cash reserved for dips: $8410</p>
       </div>
     </div>
   );
